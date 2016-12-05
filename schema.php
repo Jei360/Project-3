@@ -56,9 +56,9 @@ if(isset($_POST["subs"]))
         mysql_select_db('dtabase',$connect);
         $_POST['id1']=rand(2000,3000);
         $_POST['user_id']=$rid;
-        $_POST['data_sent']="yes";
-        $sql2="INSERT INTO Message (id1, recipient_ids, user_id, subject,body,data_sent)
-        VALUES ('$_POST[id1]','$_POST[recipient_ids]', '$_POST[user_id]', '$_POST[subject]','$_POST[body]','$_POST[data_sent]')";
+        $_POST['date_sent']=date("Y-m-d");
+        $sql2="INSERT INTO Message (id1, recipient_ids, user_id, subject,body,date_sent)
+        VALUES ('$_POST[id1]','$_POST[recipient_ids]', '$_POST[user_id]', '$_POST[subject]','$_POST[body]','$_POST[date_sent]')";
         mysql_query($sql2,$connect);
         mysql_close($connect);
         echo("MESSAGE SENT".$rid);

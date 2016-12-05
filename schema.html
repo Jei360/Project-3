@@ -16,7 +16,7 @@
            -->
            <div class="nuser">
         <h1>Sign-Up</h1>
-        <form  method="post">
+        <form action="schema.php" method="post">
     	<div class="info">
             <label for="id">Id:  </label>
             <input type="text" name="id" value="" required  maxlength="9" size="9"/>
@@ -45,7 +45,7 @@
             <input type="password" id ="pass" name="password" value="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" title= "Must contain one letter, one number and one UPPERCASE letter and should be eight characters long"required/>
             <hr/>
         </div>
-        <input type ="submit" value="Add User" name ="submit" onclick="adduser();"/>
+        <input type ="submit" value="Add User" name ="submit" />
         </form>
         </div>
        <!-- </div>-->

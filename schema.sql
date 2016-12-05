@@ -25,12 +25,12 @@ CREATE TABLE `Message`(
     user_id int(10) NOT NULL DEFAULT '0',
     subject char(30) NOT NULL DEFAULT '',
     body char(30) NOT NULL DEFAULT '',
-    data_sent char(30) NOT NULL DEFAULT ''
+    date_sent char(30) NOT NULL DEFAULT ''
     )ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
     LOCK TABLES `Message` WRITE;
-    INSERT INTO `Message` VALUES(2001,620081234,620035790,'INFO2180','How do you create a table?','yes'),
-    (2002,620056439,620012345,"COMP2190","This course is difficult","yes"),
-    (2003,620035790,620086894,"FOUN1019","When is the essay due??","yes");
+    INSERT INTO `Message` VALUES(2001,620081234,620035790,'INFO2180','How do you create a table?','2016-12-18'),
+    (2002,620056439,620012345,"COMP2190","This course is difficult","2016-12-18"),
+    (2003,620035790,620086894,"FOUN1019","When is the essay due??","2016-12-18");
     UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `Message_read`;    
@@ -41,8 +41,8 @@ CREATE TABLE `Message_read`(
     dates char(30) NOT NULL DEFAULT ''
     )ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
       LOCK TABLES `Message_read` WRITE;
-      INSERT INTO `Message_read` VALUES(0004,0001,620081234,'27-11-2016'),
-      (0005,0002,620056439,"28-11-2016"),
-      (0006,0003,620035790,"29-11-2016");
+      INSERT INTO `Message_read` VALUES(0004,0001,620081234,'2016-12-18'),
+      (0005,0002,620056439,"2016-12-18"),
+      (0006,0003,620035790,"2016-12-18");
     UNLOCK TABLES;
    

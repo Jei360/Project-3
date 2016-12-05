@@ -105,7 +105,6 @@ document.addEventListener("DOMContentLoaded",function()
                         else{
                     document.getElementsByClassName("login")[0].innerHTML+="<hr/>"+responses[y];
                     count=count+1;
-                    alert(count);
                     document.getElementsByClassName("login")[0].innerHTML+="<br/>"+"New Messages"+"<br/>";
                     }
                     
